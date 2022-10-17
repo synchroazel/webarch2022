@@ -3,4 +3,39 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+
+    <filter id="LoginFilter">
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>it.unitn.padalino.assignment2.LoginFilter</filter-class>
+    </filter>
+    <filter id="AdminFilter">
+        <filter-name>AdminFilter</filter-name>
+        <filter-class>it.unitn.padalino.assignment2.AdminFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/welcome</url-pattern>
+        <url-pattern>/play</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>AdminFilter</filter-name>
+        <url-pattern>/control</url-pattern>
+    </filter-mapping>
+
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+
+    <listener>
+        <listener-class>
+            it.unitn.padalino.assignment2.ServletContextListener
+        </listener-class>
+    </listener>
+
 </web-app>
