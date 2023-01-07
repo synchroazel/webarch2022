@@ -1,0 +1,41 @@
+<div *ngIf="memberLoaded && partiesLoaded && websitesLoaded; else isLoading" class="container">
+
+    <div class="card">
+
+        <img *ngIf="MemberPhotoURL" [src]="MemberPhotoURL" onerror="this.src='assets/generic_user_photo.png'" alt="Member photo">
+        <img *ngIf="!MemberPhotoURL" src="assets/generic_user_photo.png" alt="Member photo"/>
+
+        <div class="name">{{ MemberFullname }}</div>
+
+        <div class="birthdate">{{ MemberBirthDate }}</div>
+
+        <br>
+
+        <h3>Parties:</h3>
+
+        <div *ngFor="let party of MemberParties; let i = index">
+            <p><b>{{party}}</b></p>
+            <p style="margin-top: -16px; font-size: 13px">from {{MemberFromDates[i]}} to {{MemberToDates[i]}}</p>
+        </div>
+
+        <div class="websites" *ngIf="MemberWebsiteGov || MemberWebsitePersonal; else noWebsites">
+            <a *ngIf="MemberWebsiteGov" href="{{ MemberWebsiteGov }}">
+                <button>parliament website</button>
+            </a>
+
+            <a *ngIf="MemberWebsitePersonal" href="{{ MemberWebsitePersonal }}">
+                <button>personal website</button>
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+<ng-template #isLoading>
+    <p>Loading member data...</p>
+</ng-template>
+
+<ng-template #noWebsites>
+    <p><i>No websites available</i></p>
+</ng-template>

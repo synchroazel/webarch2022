@@ -1,0 +1,105 @@
+.name {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: "Helvetica", sans-serif;
+    margin-top: 16px;
+}
+
+.birthdate {
+    font-family: "Helvetica", sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: 5px;
+}
+
+a:link {
+    text-decoration: none;
+    font-family: "Helvetica", sans-serif;
+}
+
+p {
+    font-family: "Helvetica", sans-serif;
+    font-size: 15px;
+    line-height: 150%;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+    margin-block-start: 4px;
+    margin-block-end: 4px;
+    font-family: "Helvetica", sans-serif;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+button {
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "Helvetica", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    vertical-align: baseline;
+    width: 225px;
+    height: 35px;
+}
+
+button:hover,
+button:focus {
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+button:active {
+    background-color: #F0F0F1;
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    color: rgba(0, 0, 0, 0.5);
+    transform: translateY(0);
+}
+
+body {
+    background-color: #eaeff1;
+    font-family: "Helvetica", sans-serif;
+}
+
+img {
+    margin-top: 15px;
+    width: 225px;
+    height: 150px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.container {
+    max-width: 300px;
+    margin-left: 10px;
+}
+
+.card {
+    height: auto;
+    text-align: center;
+    background-color: #f7f7f7;
+    padding: 12px;
+    margin: 12px;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+}
+

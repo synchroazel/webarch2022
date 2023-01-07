@@ -1,0 +1,31 @@
+<h2>The Scottish Parliament</h2>
+
+<ul class="cards">
+
+    <li *ngFor="let member of allMembers; let i = index">
+
+        <div *ngIf="member; else isLoading" class="card">
+
+            <div class="name">{{ member.Fullname }}</div>
+            <br>
+
+            <img *ngIf="member.PhotoUrl" [src]="member.PhotoUrl" onerror="this.src='assets/generic_user_photo.png'"
+                 alt="Member photo">
+            <img *ngIf="!member.PhotoUrl" src="assets/generic_user_photo.png"
+                 alt="Member photo"/>
+
+            <div style="margin-top: 18px">
+                <a [routerLink]="['/member', member.Id]">
+                    <button>member detail</button>
+                </a>
+            </div>
+
+        </div>
+
+    </li>
+
+</ul>
+
+<ng-template #isLoading>
+    <p>Loading members data...</p>
+</ng-template>
