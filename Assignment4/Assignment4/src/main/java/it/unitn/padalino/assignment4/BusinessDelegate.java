@@ -20,8 +20,8 @@ public class BusinessDelegate {
         Properties jndiProps = new Properties();
         jndiProps.put(Context.INITIAL_CONTEXT_FACTORY, "org.wildfly.naming.client.WildFlyInitialContextFactory");
         jndiProps.put(Context.PROVIDER_URL, "remote+http://127.0.0.1:8080");
-        jndiProps.put(Context.SECURITY_PRINCIPAL, "admin");
-        jndiProps.put(Context.SECURITY_CREDENTIALS, "admin");
+//        jndiProps.put(Context.SECURITY_PRINCIPAL, "admin");
+//        jndiProps.put(Context.SECURITY_CREDENTIALS, "admin");
 
         studentHandler = ServiceLocator.lookup(jndiName, jndiProps, StudentHandlerBeanIf.class);
 
